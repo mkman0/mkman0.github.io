@@ -16,14 +16,25 @@
 
         .window {
             position: absolute;
-            top: 0;
+            top: 80px; /* Adjusted position */
             left: 50%;
             transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 0;
         }
 
         .message {
             text-align: center;
             margin-top: 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .button {
@@ -33,10 +44,11 @@
 
         .bg {
             position: absolute;
-            bottom: 0;
+            bottom: 80px; /* Adjusted position */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
+            z-index: 1;
         }
     </style>
 </head>
@@ -66,9 +78,14 @@
     </div>
 </div>
 
-<div class="message">
-    <h1>Boldog karácsonyt<br>Manófej!</h1>
-    <a href="https://luminapark.hu/budapest-christmas/" class="button">Nyitsd ki az ajit!</a>
+<div class="message-container">
+    <div class="bg">
+        <!-- Add background content here -->
+    </div>
+    <div class="message">
+        <h1>Boldog karácsonyt<br>Manófej!</h1>
+        <a href="https://luminapark.hu/budapest-christmas/" class="button">Nyitsd ki az ajit!</a>
+    </div>
 </div>
 
 </body>
